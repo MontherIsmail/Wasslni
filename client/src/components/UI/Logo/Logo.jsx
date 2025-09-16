@@ -8,8 +8,16 @@ function Logo() {
   const handleSubmit = () => {
     navigate('/');
   };
-  return <button onClick={handleSubmit} className="logo-button">
-  <img src={logo} alt="Logo" className="logo-img" />
-</button>;
+
+  return (
+    <button
+      type="button"
+      onClick={handleSubmit}
+      className="logo-button"
+    >
+      <img src={logo} alt="Logo" className="logo-img" />
+    </button>
+  );
 }
+
 export default Logo;
