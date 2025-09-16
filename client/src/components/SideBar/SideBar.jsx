@@ -43,6 +43,7 @@ function SideBar() {
           backgroundColor: currentPath === '/profile' ? '#EBBA3D' : '#fff',
         }}
         type="button"
+        aria-label="Open menu"
       >
         <i className="fas fa-bars" />
       </button>
