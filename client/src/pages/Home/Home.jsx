@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="home-page">
       <div className="content">
-        <p className="btn-shine">موقع مختص لتوصيل الطرود لكافة محافظات قطاع غزة , بطريقة آمنة ووقت قياسي</p>
+        <p className="btn-shine">موقع مختص لتوصيل الطرود لكافة محافظات قطاع غزة , بطريقة آمنة ووقت قياسي</p>{/* eslint-disable-line no-trailing-spaces */}
         <button type="button" className="btn btn-primary m-0" onClick={() => navigate('./verify')}>ابدأ</button>
       </div>
     </div>
