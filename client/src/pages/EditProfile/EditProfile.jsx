@@ -63,7 +63,7 @@ function EditProfile() {
     }
 
     try {
-      const response = await http.put('/api/v1/profile', {
+      const response = await http.put('/wasslni-server/api/v1/profile', {
         userName: values.username,
         phoneNumber: `+970${values.phoneNumber}`,
         img,
@@ -102,9 +102,9 @@ function EditProfile() {
       );
     } else {
       try {
-        const response = await http.put('/api/v1/profile/password', values);
+        const response = await http.put('/wasslni-server/api/v1/profile/password', values);
         if (response.message === 'password edited') {
-          const logoutResponse = await http.delete('/api/v1/auth/logout');
+          const logoutResponse = await http.delete('/wasslni-server/api/v1/auth/logout');
           setUser({});
           navigate('/login');
         }

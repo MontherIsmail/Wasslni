@@ -16,7 +16,7 @@ function SideBar() {
   const [mobile, setMobile] = useState(false);
 
   const handleLogOut = async () => {
-    const response = await http.delete('/api/v1/auth/logout');
+    const response = await http.delete('/wasslni-server/api/v1/auth/logout');
     if (response.message === 'logout successfully') {
       setUser({});
       navigate('/login');

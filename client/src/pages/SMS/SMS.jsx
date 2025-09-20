@@ -17,7 +17,7 @@ function SMS() {
 
   const onSubmit = async (e) => {
     try {
-      const response = await axios.post('/api/v1/auth/sms', {
+      const response = await axios.post('/wasslni-server/api/v1/auth/sms', {
         phoneNumber: `+970${e.phoneNumber}`,
       });
       setUser({ ...user, phoneNumber: e.phoneNumber });

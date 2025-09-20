@@ -22,7 +22,7 @@ function ParcelDetails() {
 
   const handleDelete = async () => {
     try {
-      const response = await http.delete(`/api/v1/parcels/${id}`);
+      const response = await http.delete(`/wasslni-server/api/v1/parcels/${id}`);
 
       if (response.message === 'parcel deleted') {
         setTaostBody('تم حذف الطرد بنجاح');
@@ -41,7 +41,7 @@ function ParcelDetails() {
   };
   const getDetails = async () => {
     try {
-      const response = await http.get(`/api/v1/parcels/${id}`);
+      const response = await http.get(`/wasslni-server/api/v1/parcels/${id}`);
       if (response.message === 'parcels uploaded successfully') {
         setLoading(false);
         setData(response.data);
@@ -56,7 +56,7 @@ function ParcelDetails() {
   };
   const handleStatus = async () => {
     try {
-      const response = await http.put(`/api/v1/parcels/status/${id}`);
+      const response = await http.put(`/wasslni-server/api/v1/parcels/status/${id}`);
 
       if (response.message === 'status has changed') {
         setData({ ...data, status: true });

@@ -17,7 +17,7 @@ function Login() {
 
   const onSubmit = async (e) => {
     try {
-      const response = await http.post('/api/v1/auth/login', {
+      const response = await http.post('/wasslni-server/api/v1/auth/login', {
         phoneNumber: `+970${e.phoneNumber}`, password: e.password,
       });
       if (response.message === 'login successfully') {

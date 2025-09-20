@@ -38,7 +38,7 @@ function AddParcelPage({ parcels, setParcels }) {
     }
     try {
       setErrMessage('');
-      const response = await http.post('/api/v1/parcels/', {
+      const response = await http.post('/wasslni-server/api/v1/parcels/', {
         name,
         phoneNumber: `+970${phoneNumber}`,
         price,

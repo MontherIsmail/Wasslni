@@ -46,7 +46,7 @@ function Signup() {
         isSeller = false;
       }
 
-      const response = await http.post('/api/v1/auth/signup', {
+      const response = await http.post('/wasslni-server/api/v1/auth/signup', {
         code,
         phoneNumber: `+970${phoneNumber}`,
         userName,

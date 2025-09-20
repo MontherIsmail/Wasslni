@@ -24,7 +24,7 @@ function Parcels() {
   };
   const fetchParcels = async () => {
     try {
-      const response = await http.get('/api/v1/parcels');
+      const response = await http.get('/wasslni-server/api/v1/parcels');
       if (response.message === 'parcels uploaded') {
         setParcels(response.data);
         setLoading(false);
