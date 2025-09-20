@@ -34,12 +34,15 @@ app.use([express.json(), express.urlencoded({ extended: true }), cookieParser()]
 
 app.use('/api/v1', router);
 
-if (NODE_ENV === 'production') {
-  app.use(express.static(join(__dirname, '..', '..', 'client', 'build')));
-  app.get('*', (req, res) => {
-    res.sendFile(join(__dirname, '..', '..', 'client', 'build', 'index.html'));
-  });
-}
+//if (NODE_ENV === 'production') {
+//  app.use(express.static(join(__dirname, '..', '..', 'client', 'build')));
+//  app.get('*', (req, res) => {
+//    res.sendFile(join(__dirname, '..', '..', 'client', 'build', 'index.html'));
+//  });
+//}
+app.get('/wasslni-server', (req, res) => {
+  res.send('Wasslni backend is running!');
+});
 app.use(clientError);
 app.use(Sentry.Handlers.errorHandler());
 app.use(serverError);
