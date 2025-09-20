@@ -14,7 +14,7 @@ function Logo() {
       type="button"
       onClick={handleSubmit}
       className="logo-button"
-      style={{border: none, background: none}}
+      style={{ border: 'none', background: 'none' }}
     >
       <img src={logo} alt="Logo" className="logo-img" />
     </button>
