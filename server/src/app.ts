@@ -14,7 +14,7 @@ app.set('port', PORT || 5000);
 app.use([express.json(), express.urlencoded({ extended: true }), cookieParser()]);
 
 // API routes
-app.use('/wasslni-server/api/v1', router);
+app.use('/api/v1', router);
 
 // Optional: test route to confirm backend is running
 app.get('/wasslni-server', (req, res) => {
